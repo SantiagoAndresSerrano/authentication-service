@@ -120,8 +120,7 @@ public class AuthController {
                         "            <img style=\"margin-top:3rem;width:290px\" src=\"https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_vertical_ingsistemas_ht180.png\" alt=\"logo\" class=\"CToWUd\" data-bit=\"iit\">\n" +
                         "            <p style=\"margin:1rem 0;font-size:25px\"><span class=\"il\">Confirmación</span> de <span class=\"il\">cuenta</span></p>\n" +
                         "            <p style=\"color:#424242\">Hola, <b>"+usuario.getNombre()+"</b>, Te has registrado en la " +
-                "plataforma, por favor confirma que <br> eres\n" +
-                        "                tú.\n" +
+                "plataforma, por favor realiza el proceso de confirmación.\n" +
                         "            </p>\n" +
                         "            <div style=\"margin:2rem auto;width:120px;background-color:#e4230a;padding:8px;border-radius:6px\">\n" +
                         "                <a style=\"color:#ffffff;text-decoration:none\" href="+urlFrontend+
