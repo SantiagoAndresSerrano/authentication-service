@@ -124,9 +124,11 @@ public class AuthController {
                         "                tú.\n" +
                         "            </p>\n" +
                         "            <div style=\"margin:2rem auto;width:120px;background-color:#e4230a;padding:8px;border-radius:6px\">\n" +
-                        "                <a style=\"color:#ffffff;text-decoration:none\" href=\"http://angular-ahp.s3-website.us-east-2.amazonaws.com/login/confirmation/5fabe3e8-1972-493b-b0a8-befdd607759c\" target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?q=http://angular-ahp.s3-website.us-east-2.amazonaws.com/login/confirmation/5fabe3e8-1972-493b-b0a8-befdd607759c&amp;source=gmail&amp;ust=1665453610330000&amp;usg=AOvVaw2PUZUN-BYkyxx-cHT5dAIr\">Continuar</a>\n" +
+                        "                <a style=\"color:#ffffff;text-decoration:none\" href="+urlFrontend+
+                        "/login/confirmation/"+usuario.getConfirmationToken()+" target=\"_blank\" " +
+                        ">Continuar</a>\n" +
                         "            </div>\n" +
-                        "            <div style=\"width:100%;border-top:2px solid #a5b4fc;padding:1rem 0\">\n" +
+                        "            <div style=\"width:100%;border-top:2px solid #e4230a;padding:1rem 0\">\n" +
                         "                <p>Copyright © 2022 Microservicios <br> Todos los derechos reservados.</p><div class=\"yj6qo\"></div><div class=\"adL\">\n" +
                         "            </div></div><div class=\"adL\">\n" +
                         "        </div></div><div class=\"adL\">\n" +
@@ -176,7 +178,7 @@ public class AuthController {
                         "            <div style=\"margin: 2rem auto; width: 120px; background-color: #e4230a; padding: 8px; border-radius: 6px; \">\n" +
                         "                <a style=\"color: #ffffff; text-decoration: none\" href=\""+urlFrontend+"/password-reset/confirmation"+passwordResetToken.getToken()+"\">Continuar</a>\n" +
                         "            </div>\n" +
-                        "            <div style=\"width: 100%; border-top: 2px solid #a5b4fc; padding: 1rem 0\">\n" +
+                        "            <div style=\"width: 100%; border-top: 2px solid #e4230a; padding: 1rem 0\">\n" +
                         "                <p>Copyright © 2022 Security Service <br> Todos los derechos reservados.</p>\n" +
                         "            </div>\n" +
                         "        </div>\n" +
@@ -252,7 +254,7 @@ public class AuthController {
                         "            <p style=\"margin: 1rem 0; font-size: 25px;\">Cambio de contraseña</p>\n" +
                         "            <p style=\"color: #424242;\">Hola, <b>"+u.getNombre()+"</b>, se ha cambiado tu contraseña en el sistema.  \n" +
                         "            </p>\n" +
-                        "            <div style=\"width: 100%; border-top: 2px solid #a5b4fc; padding: 1rem 0\">\n" +
+                        "            <div style=\"width: 100%; border-top: 2px solid #e4230a; padding: 1rem 0\">\n" +
                         "                <p>Copyright © 2022 Security Service <br> Todos los derechos reservados.</p>\n" +
                         "            </div>\n" +
                         "        </div>\n" +
