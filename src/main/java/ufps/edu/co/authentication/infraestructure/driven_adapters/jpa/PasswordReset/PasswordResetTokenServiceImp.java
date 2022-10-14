@@ -32,4 +32,9 @@ public class PasswordResetTokenServiceImp implements PasswordResetTokenService {
     public void eliminar(PasswordResetToken ct) {
         passwordResetTokenDAO.delete(ct);
     }
+
+    @Override
+    public void eliminarByToken(String token) {
+        passwordResetTokenDAO.deletePasswordResetTokenByToken(token);
+    }
 }
