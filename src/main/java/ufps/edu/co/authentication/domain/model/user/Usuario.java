@@ -72,6 +72,8 @@ public class Usuario implements Serializable {
         this.email = email;
         this.password = password;
         this.img = "https://cdn3d.iconscout.com/3d/premium/thumb/user-3711850-3105265.png";
+        this.fecha = new Date();
+        this.estado=false;
     }
     public Usuario(){}
 
