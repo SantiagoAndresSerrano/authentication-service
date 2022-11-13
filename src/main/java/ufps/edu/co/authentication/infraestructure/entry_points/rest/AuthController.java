@@ -346,4 +346,8 @@ public class AuthController {
         usuarioService.guardar(usuario);
         return ResponseEntity.ok("Usuario agregado correctamente");
     }
+    @GetMapping("/user")
+    public ResponseEntity<?> listAll(){
+        return ResponseEntity.ok(usuarioService.listar());
+    }
 }
