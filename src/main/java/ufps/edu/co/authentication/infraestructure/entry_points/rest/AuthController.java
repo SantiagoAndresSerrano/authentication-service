@@ -332,7 +332,7 @@ public class AuthController {
             return new ResponseEntity<>("Usuario no encontrado", HttpStatus.NOT_FOUND);
         return ResponseEntity.ok(usuario);
     }
-     @GetMapping("/user/{email}")
+     @GetMapping("/user/mail/{email}")
     public ResponseEntity<?> obtenerUsuarioPorEmail(@PathVariable String email){
         Usuario usuario = usuarioService.findByEmail(email);
         if (usuario == null)
