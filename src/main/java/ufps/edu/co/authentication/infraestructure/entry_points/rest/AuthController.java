@@ -323,4 +323,19 @@ public class AuthController {
 
         return new ResponseEntity(jwtDto, HttpStatus.OK);
     }
+    
+    @GetMapping("/user/{id}")
+    public ResponseEntity<?> obtenerUsuarioPorId(@PathVariable int id){
+        Usuario usuario = usuarioService.encontrar(id).orElse(null);
+        if (usuario == null)
+            return new ResponseEntity<>("Usuario no encontrado", HttpStatus.NOT_FOUND);
+        return ResponseEntity.ok(usuario);
+    }
+     @GetMapping("/user/{email}")
+    public ResponseEntity<?> obtenerUsuarioPorEmail(@PathVariable String email){
+        Usuario usuario = usuarioService.findByEmail(email);
+        if (usuario == null)
+            return new ResponseEntity<>("Usuario no encontrado", HttpStatus.NOT_FOUND);
+        return ResponseEntity.ok(new UserIDDTO(usuario.getIdUsuario()));
+    }
 }
