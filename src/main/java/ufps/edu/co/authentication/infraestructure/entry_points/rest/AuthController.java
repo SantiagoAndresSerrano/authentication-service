@@ -322,7 +322,7 @@ public class AuthController {
         JwtDto jwtDto = new JwtDto(jwt, userDetails.getUsername(), userDetails.getAuthorities());
 
 
-        return new ResponseEntity(jwtDto, HttpStatus.OK);
+        return new ResponseEntity<>(jwtDto, HttpStatus.OK);
     }
     
     @GetMapping("/user/{id}")
@@ -338,5 +338,12 @@ public class AuthController {
         if (usuario == null)
             return new ResponseEntity<>("Usuario no encontrado", HttpStatus.NOT_FOUND);
         return ResponseEntity.ok(new UserIDDTO(usuario.getIdUsuario()));
+    }
+    @PutMapping("/user")
+    public ResponseEntity<?> updateUser(@Valid @RequestBody Usuario usuario, BindingResult bindingResult){
+        if(bindingResult.hasErrors())
+            return new ResponseEntity<>(new Mensaje("campos mal puestos"), HttpStatus.BAD_REQUEST);
+        usuarioService.guardar(usuario);
+        return ResponseEntity.ok("Usuario agregado correctamente");
     }
 }

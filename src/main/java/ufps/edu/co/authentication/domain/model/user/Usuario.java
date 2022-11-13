@@ -44,6 +44,9 @@ public class Usuario implements Serializable {
     @Column(name = "password")
     private String password;
     @Basic(optional = false)
+    @Column(name = "img")
+    private String img;
+    @Basic(optional = false)
     @NotNull
     @Column(name = "estado")
     private boolean estado;
@@ -68,6 +71,7 @@ public class Usuario implements Serializable {
     public Usuario(@NotNull String email, @NotNull String password) {
         this.email = email;
         this.password = password;
+        this.img = "https://cdn3d.iconscout.com/3d/premium/thumb/user-3711850-3105265.png";
     }
     public Usuario(){}
 
@@ -85,6 +89,14 @@ public class Usuario implements Serializable {
 
     public void setIdUsuario(Integer idUsuario) {
         this.idUsuario = idUsuario;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public String getConfirmationToken() {
