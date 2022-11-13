@@ -34,6 +34,7 @@ import ufps.edu.co.authentication.domain.model.user.Usuario;
 import ufps.edu.co.authentication.domain.model.user.gateway.UsuarioService;
 import ufps.edu.co.authentication.infraestructure.config.EmailSenderServiceImp;
 import ufps.edu.co.authentication.infraestructure.jwt.JwtProvider;
+import ufps.edu.co.authentication.infraestructure.jwt.UserIDDTO;
 
 import javax.mail.MessagingException;
 import javax.validation.Valid;

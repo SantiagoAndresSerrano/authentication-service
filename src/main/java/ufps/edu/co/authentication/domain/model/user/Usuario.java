@@ -79,6 +79,14 @@ public class Usuario implements Serializable {
         this.fecha = fecha;
     }
 
+    public Integer getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(Integer idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
     public String getConfirmationToken() {
         return confirmationToken;
     }
