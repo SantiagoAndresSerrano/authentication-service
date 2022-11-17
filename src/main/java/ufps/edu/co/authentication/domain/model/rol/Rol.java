@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private int idRol;
         public enum RolNombre {
-            ROLE_ADMIN, ROLE_USER
+            ROLE_ADMIN, ROLE_USER, ROLE_STUDENT, ROLE_TEACHER
         }
 
         @NotNull
